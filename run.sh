@@ -8,7 +8,7 @@ echo "Script directory: $SCRIPT_DIR"
 
 cd $SCRIPT_DIR/
 
-source paq/bin/activate
+source ss/bin/activate
 
 python3 main.py
 

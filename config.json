@@ -1,5 +1,5 @@
 {
 	"port": "8070",
-	"mock_hardware": false,
+	"mock_hardware": true,
 	"log_to_file": false
 }

@@ -1,4 +1,4 @@
-'''main.py is the main entrypoint to the Air Quality application.'''
+'''main.py is the main entrypoint to the soil sampling application.'''
 from config.config import Config
 from config.log import setup_logging
 from service.service import Service

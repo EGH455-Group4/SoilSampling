@@ -5,7 +5,7 @@ from threading import Lock
 from time import sleep
 
 from motor.motor import Motor
-from models.constants import MOTOR_GPIO_PIN, T
+from models.constants import MOTOR_GPIO_PIN, T, SLEEP_INTERVAL
 
 class HardwareMotor(Motor):
     '''Implements the Motor class, and connects to hardware.'''
@@ -23,20 +23,20 @@ class HardwareMotor(Motor):
         for _ in range(T):
             self.servo.min()
             logging.info("Minimum Pos")
-            sleep(1000)
+            sleep(SLEEP_INTERVAL)
             self.servo.mid()
             logging.info("Medium Pos")
-            sleep(1000)
+            sleep(SLEEP_INTERVAL)
             self.servo.max()
             logging.info("Maximum Pos")
-            sleep(1000)
+            sleep(SLEEP_INTERVAL)
         for _ in range(T):
             self.servo.max()
             logging.info("Max Pos")
-            sleep(1000)
+            sleep(SLEEP_INTERVAL)
             self.servo.mid()
             logging.info("Mid Pos")
-            sleep(1000)
+            sleep(SLEEP_INTERVAL)
             self.servo.min()
             logging.info("Min Pos")
 

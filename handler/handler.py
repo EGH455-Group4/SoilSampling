@@ -35,5 +35,5 @@ class Handler():
         logging.info("Handler was setup.")
 
     def Run(self):
-        '''Will actually run the air quality server'''
+        '''Will actually run the soil sampling server'''
         self.app.run(debug=False, port=self.config.get_key("port"), host="0.0.0.0")
