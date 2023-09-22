@@ -1,6 +1,6 @@
 '''Handler will showcase the Soil Sampling endpoints'''
 import logging
-from flask import Flask, request
+from flask import Flask
 from flask_restful import Resource, Api, marshal
 
 from config.config import Config

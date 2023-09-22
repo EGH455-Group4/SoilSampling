@@ -14,7 +14,7 @@ class HardwareMotor(Motor):
         '''Will just log out the call and wait.'''
         logging.info("Sampling process called")
 
-        # TODO - Actually implement
+        # Actually implement this function
         time.sleep(5)
 
         logging.info("Done sampling")
