@@ -23,7 +23,6 @@ class Sample(Resource):
             'Access-Control-Allow-Headers': 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers',
         }
 
-
     def post(self):
         '''The HTTP POST response'''
         status = self.service.start_sampling()
