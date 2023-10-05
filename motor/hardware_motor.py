@@ -20,17 +20,29 @@ class HardwareMotor(Motor):
         '''Will do the sampling process.'''
         logging.info("Sampling process called")
 
-        for _ in range(T):
-            self.servo.min()
+        
+
+        self.servo.value = 1
+        sleep(8)
+        self.servo.value = -1
+        sleep(11)
+        self.servo.value = None
+        sleep(1)
+        
+        
+        
+        
+        '''for _ in range(T):
+            self.servo.max()
             logging.info("Minimum Pos")
             sleep(SLEEP_INTERVAL)
             self.servo.mid()
             logging.info("Medium Pos")
             sleep(SLEEP_INTERVAL)
-            self.servo.max()
+            self.servo.min()
             logging.info("Maximum Pos")
-            sleep(SLEEP_INTERVAL)
-        for _ in range(T):
+            sleep(SLEEP_INTERVAL)'''
+        '''for _ in range(T):
             self.servo.max()
             logging.info("Max Pos")
             sleep(SLEEP_INTERVAL)
@@ -38,7 +50,7 @@ class HardwareMotor(Motor):
             logging.info("Mid Pos")
             sleep(SLEEP_INTERVAL)
             self.servo.min()
-            logging.info("Min Pos")
+            logging.info("Min Pos")'''
 
         logging.info("Done sampling")
 
