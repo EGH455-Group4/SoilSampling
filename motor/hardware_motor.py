@@ -16,6 +16,8 @@ class HardwareMotor(Motor):
 
         logging.info("Hardware motor setup")
 
+        self.servo.value = None
+
     def sample(self, lock: Lock):
         '''Will do the sampling process.'''
         logging.info("Sampling process called")
@@ -25,7 +27,7 @@ class HardwareMotor(Motor):
         self.servo.value = 1
         sleep(8)
         self.servo.value = -1
-        sleep(11)
+        sleep(10)
         self.servo.value = None
         sleep(1)
         
