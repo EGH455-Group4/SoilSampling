@@ -12,17 +12,18 @@ class HardwareMotor(Motor):
     def __init__(self):
         logging.info("Hardware motor setup")
 
+        self.servo = None
+
     def sample(self, lock: Lock):
         '''Will do the sampling process.'''
         from gpiozero import Servo
 
         logging.info("Sampling process called")
 
-        self.servo = Servo(MOTOR_GPIO_PIN)
-
-        logging.info("Hardware motor initialised")
-
-        self.servo.value = None
+        if self.servo is None:
+            self.servo = Servo(MOTOR_GPIO_PIN)
+            logging.info("Hardware motor initialised")
+            self.servo.value = None
 
         self.servo.value = 1
         sleep(8)
